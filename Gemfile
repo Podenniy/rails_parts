@@ -32,6 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 gem "pg"
+gem 'haml-rails'
+gem 'simple_form'
+gem 'bootstrap-sass'
+group :test do
+   gem 'rspec-rails'
+   gem 'factory_girl'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

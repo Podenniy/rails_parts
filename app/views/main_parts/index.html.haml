@@ -1,0 +1,17 @@
+%h1 Listing main_parts
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @main_parts.each do |main_part|
+    %tr
+      %td= link_to 'Show', main_part
+      %td= link_to 'Edit', edit_main_part_path(main_part)
+      %td= link_to 'Destroy', main_part, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Main part', new_main_part_path
