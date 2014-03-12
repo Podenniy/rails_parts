@@ -69,6 +69,6 @@ class MainPartsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def main_part_params
-      params[:main_part]
+      params.require(:main_part).permit(:name_parts, :brand, :code_part, :code_parts_advanced, :ean, :status_product, :name_image, :additional_data, :art_cross)
     end
 end

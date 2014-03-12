@@ -1,5 +1,26 @@
 %p#notice= notice
 
+%p
+  %b Name parts:
+  = @main_part.name_parts
+%p
+  %b Brand:
+  = @main_part.brand
+%p
+  %b Code part:
+  = @main_part.code_part
+%p
+  %b Code parts advanced:
+  = @main_part.code_parts_advanced
+%p
+  %b Ean:
+  = @main_part.ean
+%p
+  %b Status product:
+  = @main_part.status_product
+%p
+  %b Name image:
+  = @main_part.name_image
 
 = link_to 'Edit', edit_main_part_path(@main_part)
 \|

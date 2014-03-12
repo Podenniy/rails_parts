@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -35,10 +35,15 @@ gem "pg"
 gem 'haml-rails'
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'jquery-ui-rails'
+gem "therubyracer"
 group :test do
    gem 'rspec-rails'
    gem 'factory_girl'
 end
+gem 'bootstrap-generators'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

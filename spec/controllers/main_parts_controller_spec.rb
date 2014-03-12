@@ -23,7 +23,19 @@ describe MainPartsController do
   # This should return the minimal set of attributes required to create a valid
   # MainPart. As you add validations to MainPart, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { {  } }
+  let(:valid_attributes) { {
+    "name_parts"                => "MyString",
+    "brand"                         => "MyString",
+    "code_part"                   =>  "MyString",
+    "code_parts_advanced"  =>  "MyString",
+     "ean"  =>  "MyString",
+     "status_product"  =>  "MyString",
+     "name_image"  =>  "MyString",
+     "additional_data"  =>  "MyString",
+     "art_cross"  =>  "MyString"
+
+    } }
+
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +97,14 @@ describe MainPartsController do
       it "assigns a newly created but unsaved main_part as @main_part" do
         # Trigger the behavior that occurs when invalid params are submitted
         MainPart.any_instance.stub(:save).and_return(false)
-        post :create, {:main_part => {  }}, valid_session
+        post :create, {:main_part => { "name_parts" => "invalid value" }}, valid_session
         expect(assigns(:main_part)).to be_a_new(MainPart)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         MainPart.any_instance.stub(:save).and_return(false)
-        post :create, {:main_part => {  }}, valid_session
+        post :create, {:main_part => { "name_parts" => "invalid value" }}, valid_session
         expect(response).to render_template("new")
       end
     end
@@ -106,8 +118,8 @@ describe MainPartsController do
         # specifies that the MainPart created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        expect_any_instance_of(MainPart).to receive(:update).with({ "these" => "params" })
-        put :update, {:id => main_part.to_param, :main_part => { "these" => "params" }}, valid_session
+        expect_any_instance_of(MainPart).to receive(:update).with({ "name_parts" => "MyString" })
+        put :update, {:id => main_part.to_param, :main_part => { "name_parts" => "MyString" }}, valid_session
       end
 
       it "assigns the requested main_part as @main_part" do
@@ -128,7 +140,7 @@ describe MainPartsController do
         main_part = MainPart.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         MainPart.any_instance.stub(:save).and_return(false)
-        put :update, {:id => main_part.to_param, :main_part => {  }}, valid_session
+        put :update, {:id => main_part.to_param, :main_part => { "name_parts" => "invalid value" }}, valid_session
         expect(assigns(:main_part)).to eq(main_part)
       end
 
@@ -136,7 +148,7 @@ describe MainPartsController do
         main_part = MainPart.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         MainPart.any_instance.stub(:save).and_return(false)
-        put :update, {:id => main_part.to_param, :main_part => {  }}, valid_session
+        put :update, {:id => main_part.to_param, :main_part => { "name_parts" => "invalid value" }}, valid_session
         expect(response).to render_template("edit")
       end
     end

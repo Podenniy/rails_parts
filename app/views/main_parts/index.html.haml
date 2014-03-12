@@ -2,12 +2,26 @@
 
 %table
   %tr
+    %th Name parts
+    %th Brand
+    %th Code part
+    %th Code parts advanced
+    %th Ean
+    %th Status product
+    %th Name image
     %th
     %th
     %th
 
   - @main_parts.each do |main_part|
     %tr
+      %td= main_part.name_parts
+      %td= main_part.brand
+      %td= main_part.code_part
+      %td= main_part.code_parts_advanced
+      %td= main_part.ean
+      %td= main_part.status_product
+      %td= main_part.name_image
       %td= link_to 'Show', main_part
       %td= link_to 'Edit', edit_main_part_path(main_part)
       %td= link_to 'Destroy', main_part, :method => :delete, :data => { :confirm => 'Are you sure?' }

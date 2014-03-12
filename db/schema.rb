@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303143532) do
+ActiveRecord::Schema.define(version: 20140310080905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20140303143532) do
     t.string   "name_image",          limit: 300
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "additional_data"
+    t.text     "art_cross"
   end
 
   add_index "main_parts", ["brand"], name: "index_main_parts_on_brand", using: :btree
